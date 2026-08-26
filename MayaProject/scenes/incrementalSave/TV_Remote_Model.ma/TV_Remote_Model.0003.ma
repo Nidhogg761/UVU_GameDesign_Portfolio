@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: TV_Remote_Model.ma
-//Last modified: Tue, Aug 25, 2026 10:36:36 PM
+//Last modified: Tue, Aug 25, 2026 10:35:24 PM
 //Codeset: UTF-8
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.1.1";
@@ -11,17 +11,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202304191415-7fa20164c6";
 fileInfo "osv" "Mac OS X 20.6.2";
-fileInfo "UUID" "27F14B7F-7D4F-4242-D7C0-788B7441C7AC";
+fileInfo "UUID" "4D1A4F3D-484E-1F0D-151A-97BF0382BDE1";
 createNode transform -s -n "persp";
 	rename -uid "2411D8C3-DC4B-CD4A-77D7-8888B74D9BB7";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.053378085873345971 11.163857907006072 2.2142126714698573 ;
-	setAttr ".r" -type "double3" -83.138352730637564 -352.60000000006175 0 ;
+	setAttr ".t" -type "double3" 2.1058962958682002 1.5557477747715112 -2.6814370262649385 ;
+	setAttr ".r" -type "double3" -39.938352730690362 -269.40000000010286 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "64562052-7D47-7C46-F5FC-93B362994DB3";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 12.182533173216829;
+	setAttr ".coi" 3.1154289740001238;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -2301,13 +2301,6 @@ createNode polyTweak -n "polyTweak49";
 	setAttr ".tk[515]" -type "float3" 0 0 0.033565722 ;
 	setAttr ".tk[516]" -type "float3" 0 0 0.033565722 ;
 	setAttr ".tk[517]" -type "float3" 0 0 0.033565722 ;
-createNode polySoftEdge -n "polySoftEdge4";
-	rename -uid "7484204D-D340-8547-6CA7-EC90A7F8990D";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "e[*]";
-	setAttr ".ix" -type "matrix" 2.3424691466793366 0 0 0 0 1 0 0 0 0 7.9566990861319731 0
-		 -0.21079461725567225 -0.41608876560332897 0.72607034832509587 1;
-	setAttr ".a" 180;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -2368,7 +2361,7 @@ connectAttr ":defaultColorMgtGlobals.cfe" "imagePlaneShape3.cmcf";
 connectAttr ":defaultColorMgtGlobals.cfp" "imagePlaneShape3.cmcp";
 connectAttr ":defaultColorMgtGlobals.wsn" "imagePlaneShape3.ws";
 connectAttr ":sideShape.msg" "imagePlaneShape3.ltc";
-connectAttr "polySoftEdge4.out" "pCubeShape1.i";
+connectAttr "polyMergeVert21.out" "pCubeShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -2620,8 +2613,6 @@ connectAttr "pCubeShape1.wm" "polyBevel6.mp";
 connectAttr "polyTweak49.out" "polyMergeVert21.ip";
 connectAttr "pCubeShape1.wm" "polyMergeVert21.mp";
 connectAttr "polyBevel6.out" "polyTweak49.ip";
-connectAttr "polyMergeVert21.out" "polySoftEdge4.ip";
-connectAttr "pCubeShape1.wm" "polySoftEdge4.mp";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 // End of TV_Remote_Model.ma
