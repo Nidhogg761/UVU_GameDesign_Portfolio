@@ -1,6 +1,8 @@
 # Maya binary files & arnold tx files
 *.mb
 *.tx
+*.mtl
+*.obj
 
 
 # This .gitignore file should be placed at the root of your Unity project directory
@@ -109,3 +111,5 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+MayaProject/sourceimages/Unit 2 - Tail Swing/seaweed_wave.gif

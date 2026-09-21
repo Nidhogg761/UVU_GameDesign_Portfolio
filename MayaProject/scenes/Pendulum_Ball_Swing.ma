@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Pendulum_Ball_Swing.ma
-//Last modified: Thu, Sep 17, 2026 11:50:25 PM
+//Last modified: Fri, Sep 18, 2026 01:18:32 PM
 //Codeset: UTF-8
 requires maya "2026";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiSkyDomeLight"
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202607282326-107b4e8809";
 fileInfo "osv" "Mac OS X 20.6.2";
-fileInfo "UUID" "7A10E4F4-D243-7448-8D24-5DA1B0F3D345";
+fileInfo "UUID" "7C4A04EE-4348-B96C-439D-54A1DBF48952";
 createNode transform -s -n "persp";
 	rename -uid "91FB47E2-924F-1C08-D2B2-8D822BF83165";
 	setAttr ".v" no;
@@ -5676,20 +5676,20 @@ parent -s -nc -r -add "|Ball1|pCylinder10" "Ball3" ;
 parent -s -nc -r -add "|Ball1|pCylinder10" "Ball4" ;
 parent -s -nc -r -add "|Ball1|pCylinder10" "Ball5" ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "4057F2BA-8A4F-13AD-9660-5D87AB1E77C5";
+	rename -uid "E4CC8450-B342-0887-3F31-38BB2026553D";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "1FF84DFC-2D47-45B1-D6F0-5AA79E10F04B";
+	rename -uid "5229D972-924A-2590-CD68-6A9E1A18B97B";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "6D19736C-5A48-0EB0-1878-21AFDF00566B";
+	rename -uid "80726050-BF46-00CE-C8E4-7681ADD43BCE";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "AB2DB203-BE4A-9FD5-8C23-558F2D49CE5A";
+	rename -uid "F92192BF-1E46-0CB8-FFE9-1F82DA7A19B1";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "4DAA1E7D-B840-3E63-AA8D-A18780839283";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "DDD99DEC-3147-6958-EB71-51BDB632DC27";
+	rename -uid "30F3474B-4D40-44E1-453B-DCA7F7325FD2";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "5021DCB8-CD44-AB2C-ECBC-36953A272F05";
 	setAttr ".g" yes;
